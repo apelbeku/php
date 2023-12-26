@@ -1,0 +1,31 @@
+version: '3.9'
+
+services:
+  www:
+    image: php:apache
+    restart: always
+    volumes:
+      - "../:/var/www/html" # sync project dir with container web dir
+    ports:
+      - "80:80"
+      - "443:443" # for future ssl traffic
+  
+  db:
+    image: mysql:latest
+    environment:
+      - MYSQL_DATABASE=php
+      - MYSQL_USER=nana
+      - MYSQL_PASSWORD=passwd # this should live in a env var
+      - MYSQL_ALLOW_EMPTY_PASSWORD=1 # equvalent to True    
+    ports:
+      - "3306:3306"
+    volumes:
+      - ../:/docker-entrypoint-initdb.d
+        
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "8001:80"
+    environment:
+      - PMA_HOST=db
+      - PMA_PORT=3306
