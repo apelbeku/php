@@ -57,7 +57,7 @@ Yes PHP code can be bad, but again you could write garbage code in any programmi
     - Caching & Security
     - Frameworks
     - PHP 8
-    - Hosting & Deploymen
+    - Hosting & Deployment
     - Best Practices
     - etc.
     
