@@ -150,7 +150,7 @@ How to embed **PHP** in **HTML**
 <body>
 
 <h1><?= 'Hello World'?></h1>
-<p>If you just need to ```print``` something you should use this shorthand version</p>
+<p>If you just need to print something you should use this shorthand version</p>
 <p>If you need to process some php then you need</p>
 <h1>
     <?php
@@ -191,4 +191,3 @@ Various way to comment in **PHP**:
      * for write documentation
      * about your source code.
      * /
-    ```
