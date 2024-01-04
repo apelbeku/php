@@ -19,7 +19,7 @@ If your file entirely contains **PHP** you do not need the closing tag and in fa
 
 ## Hello World!
 
-This is how you print **Hello World**.
+This is how you ```print``` **Hello World**.
 
 ```php
 <?php echo 'Hello World!'; ?>
@@ -40,22 +40,22 @@ Another way to ```print``` something:
 - ```php
     <?php print 'Hello World!' 
     ```
-    - print has return value of 1
-    - you can echo print
+    - ```print``` has return value of 1
+    - you can ```echo print```
         ```php
         <?php echo print 'Hello World!'
         ```
         and you will get Hello World!1
-    - this means that print could be used within expressions while echo can't.
-    - another way to print
+    - this means that ```print``` could be used within expressions while ```echo``` can't.
+    - another way to ```print```
         ```php
         <?php print('Hello World1')
         ```
 - ```php
     <?php echo 'Hello World!'
     ```
-    - you can't print echo, you will get parser error
-    - another way to echo
+    - you can't ```print echo```, you will get parser error
+    - another way to ```echo```
         ```php
             <?= 'Hello', ' ', 'World!'
         ```
@@ -63,7 +63,7 @@ Another way to ```print``` something:
         ```php
             <?php echo('Hello World')
         ```
-    - also echo is marginaly faster than print, so i would just suggest to use echo unless you have a specific reason to use print
+    - also ```echo``` is marginaly faster than ```print```, so i would just suggest to use ```echo``` unless you have a specific reason to use ```print```
 
 ## Escaping Quotes
 
@@ -83,7 +83,7 @@ Various rules when creating variable in **PHP**:
 
 - must start with a letter or an underscore
     ```php
-        $name / $_name
+    $name / $_name
     ```
 - the letter can be uppercase or lowercase
     ```php
@@ -150,7 +150,7 @@ How to embed **PHP** in **HTML**
 <body>
 
 <h1><?= 'Hello World'?></h1>
-<p>If you just need to print something you should use this shorthand version</p>
+<p>If you just need to ```print``` something you should use this shorthand version</p>
 <p>If you need to process some php then you need</p>
 <h1>
     <?php
