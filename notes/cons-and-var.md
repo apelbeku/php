@@ -15,7 +15,7 @@ $firstname = 'beku';
 
 echo $firstname;
 ```
-## Various way to define const
+## Various Way To Define Const
 
 - using ```define()```
     ```php
@@ -59,7 +59,7 @@ echo $firstname;
     echo STATUS_PAID;
     ```
 
-## When to use ```const```
+## When To Use ```const```
 
 Whenever you have static data that doesnt' change too often, e.g:
 

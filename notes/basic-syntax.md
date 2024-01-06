@@ -1,9 +1,9 @@
 
-# Basics PHP syntax
+# Basics PHP Syntax
 
 Default **APACHE** web directory is located in ```/var/www/html```, and if you want your file to be interpreted as **PHP** then your file with ```.php```. The **PHP** files can also have **HTML** and **Css** and even **JavaScript** in them, so it would work pretty much the same way.
 
-## Basics syntax
+## Basics Syntax
 
 The way **PHP** is parsed is that it looks for the opening and closing tags and interprets everything in between as **PHP**
 
@@ -25,7 +25,7 @@ This is how you ```print``` **Hello World**.
 <?php echo 'Hello World!'; ?>
 ```
 
-## Run PHP in terminal
+## Run PHP In Terminal
 
 Type in terminal.
 
@@ -117,7 +117,7 @@ $x = 4;
 echo $y;
 ```
 
-### Variable within text
+### Variable Within Text
 
 ```php
 $firstname  = 'apel';
