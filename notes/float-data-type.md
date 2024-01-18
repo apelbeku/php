@@ -86,6 +86,8 @@ echo $x;
 
 ## Never Ever Compare Floating Numbers For Equality
 
+[Hightly Recommend Read More](https://floating-point-gui.de/ "Floating Number & How To Compare It")
+
 ```php
 $x = 0.23;
 $y = 1 - 0.77;
