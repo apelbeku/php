@@ -1,12 +1,11 @@
-
 # String Data Type
 
 String is a series of character, when a value is enclose within single or double quote it's string.
 
 ## Different Single & Double Quote
 
-| Single |  Double |
-| --- | ---- |
+| Single               | Double           |
+| -------------------- | ---------------- |
 | can not use variable | can use variable |
 
 ```php
@@ -40,10 +39,10 @@ var_dump($name);
 
 Heredoc and Nowdoc are ways to handle long and multiline string that may contain complex expression, single or double qoute without need to escape them
 
-| Heredoc | Nowdoc |
-| ------- | ------ |
+| Heredoc                             | Nowdoc                             |
+| ----------------------------------- | ---------------------------------- |
 | Treat string if using doouble quote | Treat string if using single quote |
-| you could have avriable | you couldn't have variable |
+| you could have avriable             | you couldn't have variable         |
 
 ### Heredoc
 
@@ -80,4 +79,3 @@ TEXT;
 // nl2br() to make new line
 echo nl2br($text);
 ```
-

@@ -1,4 +1,3 @@
-
 # Null Data Type
 
 Null is special data type that representts a variable with no value
@@ -7,7 +6,7 @@ Null is special data type that representts a variable with no value
 
 a variable can be null:
 
-- If it's assigned the ```constant null```
+- If it's assigned the `constant null`
 - It hasn't been defined yet
 - Or it's has been unset
 
@@ -20,7 +19,7 @@ echo $x;
 var_dump($x);
 ```
 
-the other way to check it using function call ```is_null()```
+the other way to check it using function call `is_null()`
 
 ```php
 $x = null;
@@ -56,4 +55,3 @@ $x = null;
 
 var_dump((string) $x); # This is what happend when you trying to echo $x = null
 ```
-

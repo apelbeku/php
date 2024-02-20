@@ -1,7 +1,6 @@
-
 # Basics PHP Syntax
 
-Default **APACHE** web directory is located in ```/var/www/html```, and if you want your file to be interpreted as **PHP** then your file with ```.php```. The **PHP** files can also have **HTML** and **Css** and even **JavaScript** in them, so it would work pretty much the same way.
+Default **APACHE** web directory is located in `/var/www/html`, and if you want your file to be interpreted as **PHP** then your file with `.php`. The **PHP** files can also have **HTML** and **Css** and even **JavaScript** in them, so it would work pretty much the same way.
 
 ## Basics Syntax
 
@@ -19,7 +18,7 @@ If your file entirely contains **PHP** you do not need the closing tag and in fa
 
 ## Hello World!
 
-This is how you ```print``` **Hello World**.
+This is how you `print` **Hello World**.
 
 ```php
 <?php echo 'Hello World!'; ?>
@@ -35,46 +34,46 @@ php <name-of-the-file.php>
 
 ## Print vs Echo
 
-Another way to ```print``` something:
+Another way to `print` something:
 
 - ```php
-    <?php print 'Hello World!' 
+    <?php print 'Hello World!'
+  ```
+  - `print` has return value of 1
+  - you can `echo print`
+    ```php
+    <?php echo print 'Hello World!'
     ```
-    - ```print``` has return value of 1
-    - you can ```echo print```
-        ```php
-        <?php echo print 'Hello World!'
-        ```
-        and you will get Hello World!1
-    - this means that ```print``` could be used within expressions while ```echo``` can't.
-    - another way to ```print```
-        ```php
-        <?php print('Hello World1')
-        ```
+    and you will get Hello World!1
+  - this means that `print` could be used within expressions while `echo` can't.
+  - another way to `print`
+    ```php
+    <?php print('Hello World1')
+    ```
 - ```php
     <?php echo 'Hello World!'
+  ```
+  - you can't `print echo`, you will get parser error
+  - another way to `echo`
+    ```php
+        <?= 'Hello', ' ', 'World!'
     ```
-    - you can't ```print echo```, you will get parser error
-    - another way to ```echo```
-        ```php
-            <?= 'Hello', ' ', 'World!'
-        ```
-    - if you use this you can't concatenate
-        ```php
-            <?php echo('Hello World')
-        ```
-    - also ```echo``` is marginaly faster than ```print```, so i would just suggest to use ```echo``` unless you have a specific reason to use ```print```
+  - if you use this you can't concatenate
+    ```php
+        <?php echo('Hello World')
+    ```
+  - also `echo` is marginaly faster than `print`, so i would just suggest to use `echo` unless you have a specific reason to use `print`
 
 ## Escaping Quotes
 
 - we can use double quote
-    ```php
-    <?= "Joe's Invoice"
-    ```
+  ```php
+  <?= "Joe's Invoice"
+  ```
 - we can use backslash
-    ```php
-    <?= 'Joe\'s Invoice'
-    ```
+  ```php
+  <?= 'Joe\'s Invoice'
+  ```
 - recommended using double quote
 
 ## Variables
@@ -82,22 +81,22 @@ Another way to ```print``` something:
 Various rules when creating variable in **PHP**:
 
 - must start with a letter or an underscore
-    ```php
-    $name / $_name
-    ```
+  ```php
+  $name / $_name
+  ```
 - the letter can be uppercase or lowercase
-    ```php
-    $NAME / $name
-    ```
+  ```php
+  $NAME / $name
+  ```
 - do not start with number or a special character
-    ```php
-    $1name / $@name
-    ```
+  ```php
+  $1name / $@name
+  ```
 - don't use
-    ```php
-    $this
-    ```
-    becuase it's refer to Object, and we'll talk about it later
+  ```php
+  $this
+  ```
+  becuase it's refer to Object, and we'll talk about it later
 
 By default in **PHP** variables are assigned by value.
 
@@ -124,6 +123,7 @@ $firstname  = 'apel';
 
 echo 'Hello $firstname';
 ```
+
 If you want to get value from the variable you need to change from single quote to double quote
 
 ```php
@@ -141,6 +141,7 @@ echo "Hello" . $firstname;
 ## PHP in HTML
 
 How to embed **PHP** in **HTML**
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -162,34 +163,34 @@ How to embed **PHP** in **HTML**
         "or we can print content within a paragraph for example"
 
         echo <p> $x . ', ' . $y; </p>
-        
+
         "this is good for dynamically html generate but in general i would say that's not good idea to mix HTML directly in you PHP"
     ?>
 </h1>
 </body>
-</html> 
+</html>
 ```
 
 ## Comments
 
 Various way to comment in **PHP**:
+
 - single line comment
-    ```php
-    // This is single line comment.
-    # Or another way of single line comment.
-    ```
+  ```php
+  // This is single line comment.
+  # Or another way of single line comment.
+  ```
 - multiline comment
-    ```php
-    /*
-        This is multiline comment.
-    */
-    ```
+  ```php
+  /*
+      This is multiline comment.
+  */
+  ```
 - doc log comment
-    ```php
-    /**
-     * This is Doc log comment.
-     * for write documentation
-     * about your source code.
-     * /
-    ```
-    
+  ```php
+  /**
+   * This is Doc log comment.
+   * for write documentation
+   * about your source code.
+   * /
+  ```

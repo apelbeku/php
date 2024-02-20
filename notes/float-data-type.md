@@ -1,7 +1,6 @@
-
 # Float Data Type
 
-Floating point numbers are (also known as ```float```, ```doubles```, ```real numbers```)
+Floating point numbers are (also known as `float`, `doubles`, `real numbers`)
 
 ```php
 $x = 13.5;
@@ -9,29 +8,32 @@ $x = 13.5;
 echo $x;
 ```
 
-You could also writing ```float``` in exponential form, e.g:
+You could also writing `float` in exponential form, e.g:
 
 - positive
-    ```php
-    $x = 13.5e3; # the output is 13500
 
-    echo $x;
-    ```
+  ```php
+  $x = 13.5e3; # the output is 13500
+
+  echo $x;
+  ```
+
 - negative
-    ```php
-    # you could do a negative numbers too
-    $y = 13.5e-3; # the output is 0.0135
 
-    echo $y;
-    ```
-Even when we do with the positive and doesn't contain decimal it's still float
+  ```php # you could do a negative numbers too
+  $y = 13.5e-3; # the output is 0.0135
 
-```php
-$x = 13.5e3;
+  echo $y;
+  ```
 
-var_dump($x);
-echo $x;
-```
+  Even when we do with the positive and doesn't contain decimal it's still float
+
+  ```php
+  $x = 13.5e3;
+
+  var_dump($x);
+  echo $x;
+  ```
 
 ## Readability Purpose
 
@@ -45,13 +47,12 @@ var_dump($x, $y);
 echo $x, $y;
 ```
 
-
 ## Floating Number Size
 
-Just like integer the size of floating numbers is depend on the platform, we can check it using predefined ```const```:
+Just like integer the size of floating numbers is depend on the platform, we can check it using predefined `const`:
 
-- ```PHP_FLOAT_MIN```
-- ```PHP_FLOAT_MAX```
+- `PHP_FLOAT_MIN`
+- `PHP_FLOAT_MAX`
 
 Be aware of their limited precisions, e.g:
 
@@ -61,9 +62,9 @@ $x = floor((0.1 + 0.7) * 10);
 echo $x;
 ```
 
-You will think it will return ```8```, but it's will get ```7``` because ```0.1``` and ```0.7``` don't have an exact representation as the ```floating point number``` is in ```base 2 (binary)``` and ```binary``` is used internally to store the ```floating numbers```. in this case ```0.1``` and ```0.7``` times ```10``` actually equal to ```7.9999999999999991118``` and ```floor()``` basically just rounds all the numbers down
+You will think it will return `8`, but it's will get `7` because `0.1` and `0.7` don't have an exact representation as the `floating point number` is in `base 2 (binary)` and `binary` is used internally to store the `floating numbers`. in this case `0.1` and `0.7` times `10` actually equal to `7.9999999999999991118` and `floor()` basically just rounds all the numbers down
 
-### ```floor()``` is round down when ```ceil()``` is round up:
+### `floor()` is round down when `ceil()` is round up:
 
 ```php
 $x = ceil((0.1 + 0.7) * 10);
@@ -71,7 +72,7 @@ $x = ceil((0.1 + 0.7) * 10);
 echo $x;
 ```
 
-Also ```ceil()``` can result unexpected value
+Also `ceil()` can result unexpected value
 
 ```php
 /**
@@ -103,31 +104,31 @@ if ($x == $y) {
 // The result will NO
 ```
 
-## Some Operations Or Calculations Might Result in ```NAN``` Or ```INF```
+## Some Operations Or Calculations Might Result in `NAN` Or `INF`
 
-- ```NAN```
-    ```php
-    /**
-      * NAN or Not A Number
-      */
-    echo log(-1); // The result will be NAN, it's because the oeparationc cannot be compute
-    ```
-- ```INF```
-    ```php
-    /**
-      * INF or Infinite
-      * You will happend if you out of the bound of the maximum floating value that can be stored on the platform
-      */
-    echo PHP_FLOAT_MAX + 2;; // The result will be INF
-    ```
+- `NAN`
+  ```php
+  /**
+    * NAN or Not A Number
+    */
+  echo log(-1); // The result will be NAN, it's because the oeparationc cannot be compute
+  ```
+- `INF`
+  ```php
+  /**
+    * INF or Infinite
+    * You will happend if you out of the bound of the maximum floating value that can be stored on the platform
+    */
+  echo PHP_FLOAT_MAX + 2;; // The result will be INF
+  ```
 
-## ```is_nan()``` And ```is_infinite()```
+## `is_nan()` And `is_infinite()`
 
-- chekcking is ```infinite```
-    - ```is_infinite()```
-    - ```is_finite()``` will tell you if the numbers is not ```infinite```
-- chekcking is ```nan```
-    - ```is_nan()```
+- chekcking is `infinite`
+  - `is_infinite()`
+  - `is_finite()` will tell you if the numbers is not `infinite`
+- chekcking is `nan`
+  - `is_nan()`
 
 ## Float Casting
 
